@@ -1,0 +1,10 @@
+C:\Users\Администратор\source\repos\Счетчик\bin\Debug\Счетчик.exe.config
+C:\Users\Администратор\source\repos\Счетчик\bin\Debug\Счетчик.exe
+C:\Users\Администратор\source\repos\Счетчик\bin\Debug\Счетчик.pdb
+C:\Users\Администратор\source\repos\Счетчик\obj\Debug\Счетчик.csproj.AssemblyReference.cache
+C:\Users\Администратор\source\repos\Счетчик\obj\Debug\Счетчик.MainForm.resources
+C:\Users\Администратор\source\repos\Счетчик\obj\Debug\Счетчик.Properties.Resources.resources
+C:\Users\Администратор\source\repos\Счетчик\obj\Debug\Счетчик.csproj.GenerateResource.cache
+C:\Users\Администратор\source\repos\Счетчик\obj\Debug\Счетчик.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\source\repos\Счетчик\obj\Debug\Счетчик.exe
+C:\Users\Администратор\source\repos\Счетчик\obj\Debug\Счетчик.pdb
