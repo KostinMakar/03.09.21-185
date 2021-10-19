@@ -26,5 +26,22 @@ namespace Счетчик
         {
             MessageBox.Show("Программа мои утилиты содержит ряд небольших программ, \nкоторые могут пригодится в жизни. \nА главное, научить меня основам программирования на C#. \nАвтор: Костин М.Р.", "О программе");
         }
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            count++;
+            lblCount.Text = count.ToString();
+        }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            count--;
+            lblCount.Text = count.ToString();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            count=0;
+            lblCount.Text = Convert.ToString(count);
+        }
     }
 }
