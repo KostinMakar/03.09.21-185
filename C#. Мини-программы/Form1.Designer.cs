@@ -1,4 +1,3 @@
-
 namespace Счетчик
 {
     partial class MainForm
@@ -43,18 +42,23 @@ namespace Счетчик
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnRandom = new System.Windows.Forms.Button();
-            this.lblRandom = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.lblRandom = new System.Windows.Forms.Label();
+            this.btnRandom = new System.Windows.Forms.Button();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tbRandom = new System.Windows.Forms.TextBox();
+            this.btnRandomClear = new System.Windows.Forms.Button();
+            this.btnRandomCopy = new System.Windows.Forms.Button();
+            this.cbRandom = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -94,7 +98,7 @@ namespace Счетчик
             // tsmiAbout
             // 
             this.tsmiAbout.Name = "tsmiAbout";
-            this.tsmiAbout.Size = new System.Drawing.Size(149, 22);
+            this.tsmiAbout.Size = new System.Drawing.Size(180, 22);
             this.tsmiAbout.Text = "О программе";
             this.tsmiAbout.Click += new System.EventHandler(this.tsmiAbout_Click);
             // 
@@ -174,6 +178,10 @@ namespace Счетчик
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cbRandom);
+            this.tabPage2.Controls.Add(this.btnRandomCopy);
+            this.tabPage2.Controls.Add(this.btnRandomClear);
+            this.tabPage2.Controls.Add(this.tbRandom);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.numericUpDown2);
@@ -188,40 +196,27 @@ namespace Счетчик
             this.tabPage2.Text = "Генератор";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnRandom
+            // label3
             // 
-            this.btnRandom.Location = new System.Drawing.Point(272, 129);
-            this.btnRandom.Name = "btnRandom";
-            this.btnRandom.Size = new System.Drawing.Size(75, 23);
-            this.btnRandom.TabIndex = 0;
-            this.btnRandom.Text = "Задать";
-            this.btnRandom.UseVisualStyleBackColor = true;
-            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(78, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "До";
             // 
-            // lblRandom
+            // label2
             // 
-            this.lblRandom.AutoSize = true;
-            this.lblRandom.Location = new System.Drawing.Point(272, 161);
-            this.lblRandom.Name = "lblRandom";
-            this.lblRandom.Size = new System.Drawing.Size(57, 13);
-            this.lblRandom.TabIndex = 1;
-            this.lblRandom.Text = "lblRandom";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(146, 132);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(74, 20);
-            this.numericUpDown1.TabIndex = 2;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(78, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "От";
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(146, 154);
+            this.numericUpDown2.Location = new System.Drawing.Point(151, 76);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(74, 20);
             this.numericUpDown2.TabIndex = 3;
@@ -231,23 +226,80 @@ namespace Счетчик
             0,
             0});
             // 
-            // label2
+            // numericUpDown1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "От";
+            this.numericUpDown1.Location = new System.Drawing.Point(151, 54);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(74, 20);
+            this.numericUpDown1.TabIndex = 2;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // label3
+            // lblRandom
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(73, 161);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "До";
+            this.lblRandom.AutoSize = true;
+            this.lblRandom.Location = new System.Drawing.Point(277, 83);
+            this.lblRandom.Name = "lblRandom";
+            this.lblRandom.Size = new System.Drawing.Size(13, 13);
+            this.lblRandom.TabIndex = 1;
+            this.lblRandom.Text = "0";
+            // 
+            // btnRandom
+            // 
+            this.btnRandom.Location = new System.Drawing.Point(277, 51);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.Size = new System.Drawing.Size(75, 23);
+            this.btnRandom.TabIndex = 0;
+            this.btnRandom.Text = "Задать";
+            this.btnRandom.UseVisualStyleBackColor = true;
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // tbRandom
+            // 
+            this.tbRandom.Location = new System.Drawing.Point(277, 142);
+            this.tbRandom.Multiline = true;
+            this.tbRandom.Name = "tbRandom";
+            this.tbRandom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbRandom.Size = new System.Drawing.Size(75, 118);
+            this.tbRandom.TabIndex = 6;
+            // 
+            // btnRandomClear
+            // 
+            this.btnRandomClear.Location = new System.Drawing.Point(81, 142);
+            this.btnRandomClear.Name = "btnRandomClear";
+            this.btnRandomClear.Size = new System.Drawing.Size(75, 23);
+            this.btnRandomClear.TabIndex = 7;
+            this.btnRandomClear.Text = "Очистить";
+            this.btnRandomClear.UseVisualStyleBackColor = true;
+            this.btnRandomClear.Click += new System.EventHandler(this.btnRandomClear_Click);
+            // 
+            // btnRandomCopy
+            // 
+            this.btnRandomCopy.Location = new System.Drawing.Point(81, 171);
+            this.btnRandomCopy.Name = "btnRandomCopy";
+            this.btnRandomCopy.Size = new System.Drawing.Size(75, 23);
+            this.btnRandomCopy.TabIndex = 8;
+            this.btnRandomCopy.Text = "Копировать";
+            this.btnRandomCopy.UseVisualStyleBackColor = true;
+            this.btnRandomCopy.Click += new System.EventHandler(this.btnRandomCopy_Click);
+            // 
+            // cbRandom
+            // 
+            this.cbRandom.AutoSize = true;
+            this.cbRandom.Location = new System.Drawing.Point(81, 200);
+            this.cbRandom.Name = "cbRandom";
+            this.cbRandom.Size = new System.Drawing.Size(107, 17);
+            this.cbRandom.TabIndex = 9;
+            this.cbRandom.Text = "Без повторений";
+            this.cbRandom.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -266,8 +318,8 @@ namespace Счетчик
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +346,10 @@ namespace Счетчик
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label lblRandom;
         private System.Windows.Forms.Button btnRandom;
+        private System.Windows.Forms.TextBox tbRandom;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.Button btnRandomClear;
+        private System.Windows.Forms.Button btnRandomCopy;
+        private System.Windows.Forms.CheckBox cbRandom;
     }
 }
