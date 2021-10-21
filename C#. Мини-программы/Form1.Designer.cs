@@ -42,6 +42,10 @@ namespace Счетчик
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbRandom = new System.Windows.Forms.CheckBox();
+            this.btnRandomCopy = new System.Windows.Forms.Button();
+            this.btnRandomClear = new System.Windows.Forms.Button();
+            this.tbRandom = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
@@ -49,22 +53,27 @@ namespace Счетчик
             this.lblRandom = new System.Windows.Forms.Label();
             this.btnRandom = new System.Windows.Forms.Button();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tbRandom = new System.Windows.Forms.TextBox();
-            this.btnRandomClear = new System.Windows.Forms.Button();
-            this.btnRandomCopy = new System.Windows.Forms.Button();
-            this.cbRandom = new System.Windows.Forms.CheckBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.rtbNotepad = new System.Windows.Forms.RichTextBox();
+            this.блокнотToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertDate = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertTime = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
+            this.блокнотToolStripMenuItem,
             this.помощьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -98,7 +107,7 @@ namespace Счетчик
             // tsmiAbout
             // 
             this.tsmiAbout.Name = "tsmiAbout";
-            this.tsmiAbout.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAbout.Size = new System.Drawing.Size(149, 22);
             this.tsmiAbout.Text = "О программе";
             this.tsmiAbout.Click += new System.EventHandler(this.tsmiAbout_Click);
             // 
@@ -111,6 +120,7 @@ namespace Счетчик
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
@@ -196,6 +206,45 @@ namespace Счетчик
             this.tabPage2.Text = "Генератор";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // cbRandom
+            // 
+            this.cbRandom.AutoSize = true;
+            this.cbRandom.Location = new System.Drawing.Point(81, 200);
+            this.cbRandom.Name = "cbRandom";
+            this.cbRandom.Size = new System.Drawing.Size(107, 17);
+            this.cbRandom.TabIndex = 9;
+            this.cbRandom.Text = "Без повторений";
+            this.cbRandom.UseVisualStyleBackColor = true;
+            // 
+            // btnRandomCopy
+            // 
+            this.btnRandomCopy.Location = new System.Drawing.Point(81, 171);
+            this.btnRandomCopy.Name = "btnRandomCopy";
+            this.btnRandomCopy.Size = new System.Drawing.Size(75, 23);
+            this.btnRandomCopy.TabIndex = 8;
+            this.btnRandomCopy.Text = "Копировать";
+            this.btnRandomCopy.UseVisualStyleBackColor = true;
+            this.btnRandomCopy.Click += new System.EventHandler(this.btnRandomCopy_Click);
+            // 
+            // btnRandomClear
+            // 
+            this.btnRandomClear.Location = new System.Drawing.Point(81, 142);
+            this.btnRandomClear.Name = "btnRandomClear";
+            this.btnRandomClear.Size = new System.Drawing.Size(75, 23);
+            this.btnRandomClear.TabIndex = 7;
+            this.btnRandomClear.Text = "Очистить";
+            this.btnRandomClear.UseVisualStyleBackColor = true;
+            this.btnRandomClear.Click += new System.EventHandler(this.btnRandomClear_Click);
+            // 
+            // tbRandom
+            // 
+            this.tbRandom.Location = new System.Drawing.Point(277, 142);
+            this.tbRandom.Multiline = true;
+            this.tbRandom.Name = "tbRandom";
+            this.tbRandom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbRandom.Size = new System.Drawing.Size(75, 118);
+            this.tbRandom.TabIndex = 6;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -262,44 +311,63 @@ namespace Счетчик
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // tbRandom
+            // tabPage3
             // 
-            this.tbRandom.Location = new System.Drawing.Point(277, 142);
-            this.tbRandom.Multiline = true;
-            this.tbRandom.Name = "tbRandom";
-            this.tbRandom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbRandom.Size = new System.Drawing.Size(75, 118);
-            this.tbRandom.TabIndex = 6;
+            this.tabPage3.Controls.Add(this.rtbNotepad);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(420, 324);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Блокнот";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // btnRandomClear
+            // rtbNotepad
             // 
-            this.btnRandomClear.Location = new System.Drawing.Point(81, 142);
-            this.btnRandomClear.Name = "btnRandomClear";
-            this.btnRandomClear.Size = new System.Drawing.Size(75, 23);
-            this.btnRandomClear.TabIndex = 7;
-            this.btnRandomClear.Text = "Очистить";
-            this.btnRandomClear.UseVisualStyleBackColor = true;
-            this.btnRandomClear.Click += new System.EventHandler(this.btnRandomClear_Click);
+            this.rtbNotepad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbNotepad.Location = new System.Drawing.Point(0, 0);
+            this.rtbNotepad.Name = "rtbNotepad";
+            this.rtbNotepad.Size = new System.Drawing.Size(420, 324);
+            this.rtbNotepad.TabIndex = 0;
+            this.rtbNotepad.Text = "";
             // 
-            // btnRandomCopy
+            // блокнотToolStripMenuItem
             // 
-            this.btnRandomCopy.Location = new System.Drawing.Point(81, 171);
-            this.btnRandomCopy.Name = "btnRandomCopy";
-            this.btnRandomCopy.Size = new System.Drawing.Size(75, 23);
-            this.btnRandomCopy.TabIndex = 8;
-            this.btnRandomCopy.Text = "Копировать";
-            this.btnRandomCopy.UseVisualStyleBackColor = true;
-            this.btnRandomCopy.Click += new System.EventHandler(this.btnRandomCopy_Click);
+            this.блокнотToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiInsertDate,
+            this.tsmiInsertTime,
+            this.tsmiSave,
+            this.tsmiLoad});
+            this.блокнотToolStripMenuItem.Name = "блокнотToolStripMenuItem";
+            this.блокнотToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.блокнотToolStripMenuItem.Text = "Блокнот";
             // 
-            // cbRandom
+            // tsmiInsertDate
             // 
-            this.cbRandom.AutoSize = true;
-            this.cbRandom.Location = new System.Drawing.Point(81, 200);
-            this.cbRandom.Name = "cbRandom";
-            this.cbRandom.Size = new System.Drawing.Size(107, 17);
-            this.cbRandom.TabIndex = 9;
-            this.cbRandom.Text = "Без повторений";
-            this.cbRandom.UseVisualStyleBackColor = true;
+            this.tsmiInsertDate.Name = "tsmiInsertDate";
+            this.tsmiInsertDate.Size = new System.Drawing.Size(180, 22);
+            this.tsmiInsertDate.Text = "Вставить дату";
+            this.tsmiInsertDate.Click += new System.EventHandler(this.tsmiInsertDate_Click);
+            // 
+            // tsmiInsertTime
+            // 
+            this.tsmiInsertTime.Name = "tsmiInsertTime";
+            this.tsmiInsertTime.Size = new System.Drawing.Size(180, 22);
+            this.tsmiInsertTime.Text = "Вставить время";
+            this.tsmiInsertTime.Click += new System.EventHandler(this.tsmiInsertTime_Click);
+            // 
+            // tsmiSave
+            // 
+            this.tsmiSave.Name = "tsmiSave";
+            this.tsmiSave.Size = new System.Drawing.Size(180, 22);
+            this.tsmiSave.Text = "Сохранить";
+            this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
+            // 
+            // tsmiLoad
+            // 
+            this.tsmiLoad.Name = "tsmiLoad";
+            this.tsmiLoad.Size = new System.Drawing.Size(180, 22);
+            this.tsmiLoad.Text = "Загрузить";
+            this.tsmiLoad.Click += new System.EventHandler(this.tsmiLoad_Click);
             // 
             // MainForm
             // 
@@ -311,6 +379,7 @@ namespace Счетчик
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Мои утилиты";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -320,6 +389,7 @@ namespace Счетчик
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,5 +421,12 @@ namespace Счетчик
         private System.Windows.Forms.Button btnRandomClear;
         private System.Windows.Forms.Button btnRandomCopy;
         private System.Windows.Forms.CheckBox cbRandom;
+        private System.Windows.Forms.ToolStripMenuItem блокнотToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertDate;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertTime;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.RichTextBox rtbNotepad;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSave;
+        private System.Windows.Forms.ToolStripMenuItem tsmiLoad;
     }
 }
