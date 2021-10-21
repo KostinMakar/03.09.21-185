@@ -30,7 +30,7 @@ namespace Счетчик
             MessageBox.Show("Программа мои утилиты содержит ряд небольших программ, \nкоторые могут пригодится в жизни. \nА главное, научить меня основам программирования на C#. \nАвтор: Костин М.Р.", "О программе");
         }
 
-       
+
         private void btnPlus_Click(object sender, EventArgs e)
         {
             count++;
@@ -45,14 +45,14 @@ namespace Счетчик
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            count=0;
+            count = 0;
             lblCount.Text = Convert.ToString(count);
         }
 
         private void btnRandom_Click(object sender, EventArgs e)
         {
             int n;
-            n = rnd.Next(Convert.ToInt32(numericUpDown1.Value),Convert.ToInt32(numericUpDown2.Value)+1);
+            n = rnd.Next(Convert.ToInt32(numericUpDown1.Value), Convert.ToInt32(numericUpDown2.Value) + 1);
             lblRandom.Text = n.ToString();
             if (cbRandom.Checked)
             {
@@ -64,8 +64,8 @@ namespace Счетчик
                     i++;
                     if (i > 1000) break;
                 }
-                    if (i<=1000) tbRandom.AppendText(n + "              " + "\n");
-                
+                if (i <= 1000) tbRandom.AppendText(n + "              " + "\n");
+
             }
             else tbRandom.AppendText(n + "              " + "\n");
         }
@@ -78,6 +78,50 @@ namespace Счетчик
         private void btnRandomCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(tbRandom.Text);
+        }
+
+        private void tsmiInsertDate_Click(object sender, EventArgs e)
+        {
+            rtbNotepad.AppendText(DateTime.Now.ToShortDateString() + "\n");
+        }
+
+        private void tsmiInsertTime_Click(object sender, EventArgs e)
+        {
+            rtbNotepad.AppendText(DateTime.Now.ToShortTimeString() + "\n");
+        }
+
+        private void tsmiSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                rtbNotepad.SaveFile("notepad.rtf");
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при сохранении");
+            }
+        }
+
+        void LoadNotepad()
+        {
+            try
+            {
+                rtbNotepad.LoadFile("notepad.rtf");
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при загрузке");
+            }
+        }
+
+        private void tsmiLoad_Click(object sender, EventArgs e)
+        {
+            LoadNotepad();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LoadNotepad();
         }
     }
 }
