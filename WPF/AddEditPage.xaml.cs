@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +23,12 @@ namespace ToursApp
         public AddEditPage()
         {
             InitializeComponent();
+            ComboCountries.ItemsSource = ToursKMEntities.GetContext().Country.ToList();
+        }
+
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
