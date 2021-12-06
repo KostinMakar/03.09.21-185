@@ -15,6 +15,7 @@
 12. Revert – удаление новых изменений.
  git clone https://github.com/KostinMakar/Kostin185.git
  cd Kostin185/
+ git pull(если реп. уже склонирован)
   git add .
   git commit -m "qwe"
    git push https://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@github.com/KostinMakar/Kostin185.git
