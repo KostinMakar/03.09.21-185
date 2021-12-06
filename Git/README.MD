@@ -13,9 +13,10 @@
 10. Push – отправка данных на сервер.
 11. Mergs – слияние веток.
 12. Revert – удаление новых изменений.
- git clone https://github.com/KostinMakar/Kostin185.git
- cd Kostin185/
- git pull(если реп. уже склонирован)
-  git add .
-  git commit -m "qwe"
-   git push https://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@github.com/KostinMakar/Kostin185.git
+ <br/> git clone https://github.com/KostinMakar/Kostin185.git
+ <br/> cd Kostin185/
+ <br/> git pull(если реп. уже склонирован)
+ <br/> git add .
+ <br/> git commit -m "qwe"
+ <br/> git push https://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@github.com/KostinMakar/Kostin185.git
+
